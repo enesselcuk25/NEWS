@@ -11,7 +11,7 @@
         android:theme="@style/Theme.NEWS"
         android:fullBackupContent="@xml/backup_descriptor">
         <activity
-            android:name=".MainActivity"
+            android:name=".views.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
