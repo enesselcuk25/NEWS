@@ -2,33 +2,135 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <ScrollView
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fillViewport="true"
-        tools:context=".views.MainActivity">
+        android:orientation="vertical">
 
-        <LinearLayout
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            tools:context=".MainActivity">
+            tools:context=".views.BarFragment">
 
-            <fragment
-                android:name="com.example.news.views.BarFragment"
+            <ImageView
+                android:id="@+id/img_live"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:contentDescription="@string/canl_yay_n"
+                android:maxHeight="70dp"
+                android:minWidth="30dp"
+                android:src="@drawable/liveimage" />
+
+            <ImageView
+                android:id="@+id/img_logo"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:src="@mipmap/ic_launcher_round" />
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+
+            tools:context=".views.MainActivity">
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:tag="BarFragment" />
-
-            <fragment
-                android:name="com.example.news.views.scrollFragment"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:tag="contentFragment" />
+                android:orientation="vertical"
+                tools:context=".MainActivity">
 
 
-        </LinearLayout>
+                <FrameLayout
+                    android:id="@+id/CardFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    tools:ignore="MissingConstraints" />
+
+                <FrameLayout
+                    android:id="@+id/ScrollFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    tools:ignore="MissingConstraints" />
+
+                <FrameLayout
+                    android:id="@+id/contentsFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    tools:ignore="MissingConstraints" />
+
+                <FrameLayout
+                    android:id="@+id/contents2Fragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    tools:ignore="MissingConstraints" />
+
+                <FrameLayout
+                    android:id="@+id/Scroll2Fragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    tools:ignore="MissingConstraints" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:id="@+id/contents3Fragment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        tools:ignore="MissingConstraints" />
+
+                    <FrameLayout
+                        android:id="@+id/contents4Fragment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        tools:ignore="MissingConstraints" />
 
 
-    </ScrollView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:id="@+id/contents5Fragment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        tools:ignore="MissingConstraints" />
+                    <FrameLayout
+                        android:id="@+id/contents6Fragment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        tools:ignore="MissingConstraints" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+
 </layout>
