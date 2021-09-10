@@ -4,10 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:layout_editor_absoluteX="0dp"
     tools:layout_editor_absoluteY="50dp">
+    
+    <data>
+        <variable
+            name="Rates"
+            type="com.example.news.userDataModel.rateModel.Edata" />
+        <variable
+            name="RatesNum"
+            type="com.example.news.userDataModel.rateModel.Rdata" />
+        <variable
+            name="RatesNumD"
+            type="com.example.news.userDataModel.rateModel.Downdata" />
+        
+    </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/customborder"
         tools:context=".views.contentsFragment">
 
 
@@ -27,7 +42,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginStart="10dp"
-                android:text="fg"
+                android:text="@{Rates.bist}"
+                android:textColor="@color/white"
                 android:textSize="15sp"
                 android:textStyle="bold" />
 
@@ -35,16 +51,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginStart="60dp"
-                android:text="fg"
+                android:layout_marginStart="10dp"
+                android:text="@{RatesNum.bistNumber}"
+                android:textColor="@color/white"
                 android:textSize="15sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginStart="50dp"
-                android:text="fg"
+                android:layout_marginStart="10dp"
+                android:text="@{RatesNumD.bistNumberD}"
+                android:textColor="@color/white"
                 android:textSize="15sp" />
 
         </LinearLayout>
@@ -64,7 +82,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginStart="10dp"
-                android:text="fg"
+                android:text="@{Rates.dolar}"
+                android:textColor="@color/white"
                 android:textSize="15sp"
                 android:textStyle="bold" />
 
@@ -72,16 +91,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginStart="60dp"
-                android:text="fg"
+                android:layout_marginStart="10dp"
+                android:text="@{RatesNum.dolarNumber}"
+                android:textColor="@color/white"
                 android:textSize="15sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginStart="50dp"
-                android:text="fg"
+                android:layout_marginStart="10dp"
+                android:text="@{RatesNumD.dolarNumberD}"
+                android:textColor="@color/white"
                 android:textSize="15sp" />
 
         </LinearLayout>
@@ -103,7 +124,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginStart="10dp"
-                android:text="fg"
+                android:text="@{Rates.gold}"
+                android:textColor="@color/white"
                 android:textSize="15sp"
                 android:textStyle="bold" />
 
@@ -111,16 +133,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginStart="60dp"
-                android:text="fg"
+                android:layout_marginStart="10dp"
+                android:text="@{RatesNum.goldNumber}"
+                android:textColor="@color/white"
                 android:textSize="15sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginStart="50dp"
-                android:text="fg"
+                android:layout_marginStart="10dp"
+                android:text="@{RatesNumD.goldNumberD}"
+                android:textColor="@color/white"
                 android:textSize="15sp" />
 
         </LinearLayout>
@@ -142,7 +166,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginStart="10dp"
-                android:text="fg"
+                android:text="@{Rates.euro}"
+                android:textColor="@color/white"
                 android:textSize="15sp"
                 android:textStyle="bold" />
 
@@ -150,16 +175,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginStart="60dp"
-                android:text="fg"
+                android:layout_marginStart="10dp"
+                android:text="@{RatesNum.euroNumber}"
+                android:textColor="@color/white"
                 android:textSize="15sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginStart="50dp"
-                android:text="fg"
+                android:layout_marginStart="10dp"
+                android:text="@{RatesNumD.euroNumberD}"
+                android:textColor="@color/white"
                 android:textSize="15sp" />
 
         </LinearLayout>

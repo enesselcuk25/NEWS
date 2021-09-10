@@ -6,17 +6,29 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.news.R
+import com.example.news.databinding.FragmentCardBinding
+import com.example.news.databinding.FragmentContent3Binding
+import com.example.news.userDataModel.contentModel.content3detail.ContentDetailImage
+import com.example.news.userDataModel.contentModel.content3detail.ContentDetailText
 
 
 class content3Fragment : Fragment() {
 
-
+    private  lateinit var binding: FragmentContent3Binding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_content3, container, false)
+        binding = FragmentContent3Binding.inflate(inflater, container, false)
+        return binding.root
+
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.newsText = ContentDetailText("Sağlık Bakanı Koca, Erzurum ve Yozgat'ın aşılamada \"mavi\" kategorideki iller arasına girdiğini duyurdu")
+        binding.newsImage = ContentDetailImage(R.drawable.content3image)
     }
 
 

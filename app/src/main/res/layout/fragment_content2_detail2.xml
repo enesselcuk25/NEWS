@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="contentAbout2DetailText"
+            type="com.example.news.userDataModel.contentModel.content1detail.Content1Data" />
+
+        <variable
+            name="contentAbout2DetailImage"
+            type="com.example.news.userDataModel.contentModel.content1detail.Content1dataImage" />
+   </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:background="#2B2B2B"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:context=".views.content2.content2DetailFragment">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{contentAbout2DetailText.aboutOne}"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="30sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@{contentAbout2DetailText.aboutTwo}"
+                android:layout_marginTop="5dp"
+                android:textColor="#E42525"
+                android:textSize="15sp"/>
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxHeight="350dp"
+                android:minWidth="200dp"
+                app:imageResource="@{contentAbout2DetailImage.imageDetail}"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20sp"
+                android:text = "@{contentAbout2DetailText.aboutDetail}"
+                android:textColor="@color/white"
+                android:textSize="14sp"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</layout>

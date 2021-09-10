@@ -1,40 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:paddingBottom="10dp"
-    tools:context=".views.CardFragment">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="350dp"
-        android:layout_height="100dp"
-        app:cardCornerRadius="6dp"
-        app:cardElevation="4dp"
-        app:cardUseCompatPadding="true"
-        android:layout_gravity="center">
+    <data>
 
-        <TextView
-            android:id="@+id/cardTextview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="sdfgsdfsdfsdf"
-            android:layout_gravity="center"/>
+        <variable
+            name="covid"
+            type="com.example.news.userDataModel.covid.CovidData" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/twocustomb"
+        android:orientation="horizontal"
+        tools:context=".views.covid.CardFragment">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardCovid"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
+            android:backgroundTint="#2B2B2B"
+            app:cardCornerRadius="6dp"
+            app:cardElevation="4dp"
+            app:cardUseCompatPadding="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{covid.covidDataNews}"
+                android:textColor="#2196F3"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="130dp"
+                android:text="@{covid.covidData}"
+                android:textColor="@color/white" />
+
+
+        </androidx.cardview.widget.CardView>
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/arrow"
             android:layout_gravity="center"
-            android:layout_marginStart="135dp"/>
+            android:src="@drawable/arrow" />
 
 
-
-    </androidx.cardview.widget.CardView>
-
-
-
-
-</LinearLayout>
+    </LinearLayout>
+</layout>

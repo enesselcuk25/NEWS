@@ -13,12 +13,15 @@ import com.smarteist.autoimageslider.SliderViewAdapter
 //│ 7.09.2021                │
 //└──────────────────────────┘
 
-class adapter(private var imageList:List<Int>): SliderViewAdapter<adapter.holder>() {
-    inner class holder(val binding: ItemPageBinding):SliderViewAdapter.ViewHolder(binding.root) {
+class adapter(private var imageList: ArrayList<Int>): SliderViewAdapter<adapter.holder>() {
 
+interface Listener {
+    fun onClick(imageList: ArrayList<Int>)
+}
+
+    inner class holder(val binding: ItemPageBinding):SliderViewAdapter.ViewHolder(binding.root) {
         fun bind(){
             with(binding){
-
             }
         }
     }
@@ -33,6 +36,13 @@ class adapter(private var imageList:List<Int>): SliderViewAdapter<adapter.holder
     }
 
     override fun onBindViewHolder(viewHolder: adapter.holder?, position: Int) {
-        viewHolder?.binding?.imageView?.setImageResource(imageList[position])
+
+        with(viewHolder) {
+            this?.binding?.imageView?.setImageResource(imageList[position])
+        }
+
     }
-} 
+
+
+}
+
